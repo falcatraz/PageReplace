@@ -1,17 +1,17 @@
 [
 {
-  "directory": "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build",
-  "command": "/usr/bin/cc    -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG -std=gnu11 -o CMakeFiles/replaceList.dir/src/lruList.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/lruList.c",
-  "file": "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/lruList.c"
+  "directory": "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build",
+  "command": "/usr/bin/cc    -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG -std=gnu11 -o CMakeFiles/replaceList.dir/src/lruList.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/lruList.c",
+  "file": "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/lruList.c"
 },
 {
-  "directory": "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build",
-  "command": "/usr/bin/cc    -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG -std=gnu11 -o CMakeFiles/replaceList.dir/src/optArray.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c",
-  "file": "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c"
+  "directory": "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build",
+  "command": "/usr/bin/cc    -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG -std=gnu11 -o CMakeFiles/replaceList.dir/src/optArray.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c",
+  "file": "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c"
 },
 {
-  "directory": "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build",
-  "command": "/usr/bin/cc    -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG -std=gnu11 -o CMakeFiles/replaceList.dir/src/replace.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/replace.c",
-  "file": "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/replace.c"
+  "directory": "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build",
+  "command": "/usr/bin/cc    -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG -std=gnu11 -o CMakeFiles/replaceList.dir/src/replace.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c",
+  "file": "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c"
 }
 ]

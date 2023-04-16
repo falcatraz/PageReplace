@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/lruList.c" "CMakeFiles/replaceList.dir/src/lruList.c.o" "gcc" "CMakeFiles/replaceList.dir/src/lruList.c.o.d"
-  "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c" "CMakeFiles/replaceList.dir/src/optArray.c.o" "gcc" "CMakeFiles/replaceList.dir/src/optArray.c.o.d"
-  "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/replace.c" "CMakeFiles/replaceList.dir/src/replace.c.o" "gcc" "CMakeFiles/replaceList.dir/src/replace.c.o.d"
+  "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/lruList.c" "CMakeFiles/replaceList.dir/src/lruList.c.o" "gcc" "CMakeFiles/replaceList.dir/src/lruList.c.o.d"
+  "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c" "CMakeFiles/replaceList.dir/src/optArray.c.o" "gcc" "CMakeFiles/replaceList.dir/src/optArray.c.o.d"
+  "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c" "CMakeFiles/replaceList.dir/src/replace.c.o" "gcc" "CMakeFiles/replaceList.dir/src/replace.c.o.d"
   )
 
 # Targets to which this target links.

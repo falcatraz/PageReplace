@@ -1,8 +1,8 @@
 CMakeFiles/replaceList.dir/src/optArray.c.o: \
- /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c \
+ /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c \
  /usr/include/stdc-predef.h \
- /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/../inc/optArray.h \
- /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/../inc/replace.h \
+ /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/../inc/optArray.h \
+ /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/../inc/replace.h \
  /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

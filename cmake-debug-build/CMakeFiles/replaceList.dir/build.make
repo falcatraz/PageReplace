@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/replace
+CMAKE_SOURCE_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build
+CMAKE_BINARY_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/replaceList.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/replaceList.dir/flags.make
 CMakeFiles/replaceList.dir/src/lruList.c.o: CMakeFiles/replaceList.dir/flags.make
 CMakeFiles/replaceList.dir/src/lruList.c.o: ../src/lruList.c
 CMakeFiles/replaceList.dir/src/lruList.c.o: CMakeFiles/replaceList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/replaceList.dir/src/lruList.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/replaceList.dir/src/lruList.c.o -MF CMakeFiles/replaceList.dir/src/lruList.c.o.d -o CMakeFiles/replaceList.dir/src/lruList.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/lruList.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/replaceList.dir/src/lruList.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/replaceList.dir/src/lruList.c.o -MF CMakeFiles/replaceList.dir/src/lruList.c.o.d -o CMakeFiles/replaceList.dir/src/lruList.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/lruList.c
 
 CMakeFiles/replaceList.dir/src/lruList.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/replaceList.dir/src/lruList.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/lruList.c > CMakeFiles/replaceList.dir/src/lruList.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/lruList.c > CMakeFiles/replaceList.dir/src/lruList.c.i
 
 CMakeFiles/replaceList.dir/src/lruList.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/replaceList.dir/src/lruList.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/lruList.c -o CMakeFiles/replaceList.dir/src/lruList.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/lruList.c -o CMakeFiles/replaceList.dir/src/lruList.c.s
 
 CMakeFiles/replaceList.dir/src/optArray.c.o: CMakeFiles/replaceList.dir/flags.make
 CMakeFiles/replaceList.dir/src/optArray.c.o: ../src/optArray.c
 CMakeFiles/replaceList.dir/src/optArray.c.o: CMakeFiles/replaceList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/replaceList.dir/src/optArray.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/replaceList.dir/src/optArray.c.o -MF CMakeFiles/replaceList.dir/src/optArray.c.o.d -o CMakeFiles/replaceList.dir/src/optArray.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/replaceList.dir/src/optArray.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/replaceList.dir/src/optArray.c.o -MF CMakeFiles/replaceList.dir/src/optArray.c.o.d -o CMakeFiles/replaceList.dir/src/optArray.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c
 
 CMakeFiles/replaceList.dir/src/optArray.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/replaceList.dir/src/optArray.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c > CMakeFiles/replaceList.dir/src/optArray.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c > CMakeFiles/replaceList.dir/src/optArray.c.i
 
 CMakeFiles/replaceList.dir/src/optArray.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/replaceList.dir/src/optArray.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/optArray.c -o CMakeFiles/replaceList.dir/src/optArray.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c -o CMakeFiles/replaceList.dir/src/optArray.c.s
 
 CMakeFiles/replaceList.dir/src/replace.c.o: CMakeFiles/replaceList.dir/flags.make
 CMakeFiles/replaceList.dir/src/replace.c.o: ../src/replace.c
 CMakeFiles/replaceList.dir/src/replace.c.o: CMakeFiles/replaceList.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/replaceList.dir/src/replace.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/replaceList.dir/src/replace.c.o -MF CMakeFiles/replaceList.dir/src/replace.c.o.d -o CMakeFiles/replaceList.dir/src/replace.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/replace.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/replaceList.dir/src/replace.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/replaceList.dir/src/replace.c.o -MF CMakeFiles/replaceList.dir/src/replace.c.o.d -o CMakeFiles/replaceList.dir/src/replace.c.o -c /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c
 
 CMakeFiles/replaceList.dir/src/replace.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/replaceList.dir/src/replace.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/replace.c > CMakeFiles/replaceList.dir/src/replace.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c > CMakeFiles/replaceList.dir/src/replace.c.i
 
 CMakeFiles/replaceList.dir/src/replace.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/replaceList.dir/src/replace.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/src/replace.c -o CMakeFiles/replaceList.dir/src/replace.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c -o CMakeFiles/replaceList.dir/src/replace.c.s
 
 # Object files for target replaceList
 replaceList_OBJECTS = \
@@ -125,7 +125,7 @@ bin/replaceList: CMakeFiles/replaceList.dir/src/optArray.c.o
 bin/replaceList: CMakeFiles/replaceList.dir/src/replace.c.o
 bin/replaceList: CMakeFiles/replaceList.dir/build.make
 bin/replaceList: CMakeFiles/replaceList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable bin/replaceList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable bin/replaceList"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/replaceList.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/replaceList.dir/clean:
 .PHONY : CMakeFiles/replaceList.dir/clean
 
 CMakeFiles/replaceList.dir/depend:
-	cd /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francisco/OS_Labs/AlcarazFranciscoL10/replace /home/francisco/OS_Labs/AlcarazFranciscoL10/replace /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles/replaceList.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles/replaceList.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/replaceList.dir/depend
 

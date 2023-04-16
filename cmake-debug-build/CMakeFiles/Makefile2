@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/replace
+CMAKE_SOURCE_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build
+CMAKE_BINARY_DIR = /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/replaceList.dir/clean
 CMakeFiles/replaceList.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/replaceList.dir/build.make CMakeFiles/replaceList.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/replaceList.dir/build.make CMakeFiles/replaceList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles --progress-num=1,2,3,4 "Built target replaceList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles --progress-num=1,2,3,4 "Built target replaceList"
 .PHONY : CMakeFiles/replaceList.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/replaceList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/replaceList.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/CMakeFiles 0
 .PHONY : CMakeFiles/replaceList.dir/rule
 
 # Convenience name for target.

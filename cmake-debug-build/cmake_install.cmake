@@ -1,4 +1,4 @@
-# Install script for directory: /home/francisco/OS_Labs/AlcarazFranciscoL10/replace
+# Install script for directory: /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/cmake-debug-build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

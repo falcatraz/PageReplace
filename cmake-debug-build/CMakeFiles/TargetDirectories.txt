@@ -1,0 +1,3 @@
+/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles/replaceList.dir
+/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles/edit_cache.dir
+/home/francisco/OS_Labs/AlcarazFranciscoL10/replace/cmake-debug-build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -g -Wall --pedantic -g -O0 -D_DEBUG CMakeFiles/replaceList.dir/src/lruList.c.o CMakeFiles/replaceList.dir/src/optArray.c.o CMakeFiles/replaceList.dir/src/replace.c.o -o bin/replaceList 

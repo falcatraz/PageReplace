@@ -66,6 +66,7 @@ CMakeFiles/replaceList.dir/src/lruList.c.o
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 
 CMakeFiles/replaceList.dir/src/optArray.c.o
  /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/optArray.c
@@ -132,6 +133,7 @@ CMakeFiles/replaceList.dir/src/optArray.c.o
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 
 CMakeFiles/replaceList.dir/src/replace.c.o
  /home/francisco/OS_Labs/AlcarazFranciscoL10/PageReplace/src/replace.c
@@ -197,4 +199,5 @@ CMakeFiles/replaceList.dir/src/replace.c.o
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 

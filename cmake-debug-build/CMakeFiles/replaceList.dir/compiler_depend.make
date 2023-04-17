@@ -64,7 +64,8 @@ CMakeFiles/replaceList.dir/src/lruList.c.o: ../src/lruList.c \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 
 CMakeFiles/replaceList.dir/src/optArray.c.o: ../src/optArray.c \
   /usr/include/stdc-predef.h \
@@ -129,7 +130,8 @@ CMakeFiles/replaceList.dir/src/optArray.c.o: ../src/optArray.c \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 
 CMakeFiles/replaceList.dir/src/replace.c.o: ../src/replace.c \
   /usr/include/stdc-predef.h \
@@ -193,7 +195,8 @@ CMakeFiles/replaceList.dir/src/replace.c.o: ../src/replace.c \
   /usr/include/time.h \
   /usr/include/x86_64-linux-gnu/bits/time.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h
 
 
 ../src/replace.c:
@@ -201,6 +204,8 @@ CMakeFiles/replaceList.dir/src/replace.c.o: ../src/replace.c \
 ../inc/optArray.h:
 
 ../src/optArray.c:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdbool.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 

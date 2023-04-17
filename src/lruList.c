@@ -18,6 +18,9 @@ int nummberOfFaults = 0;
 
 int hitPageNumber = 0;
 
+// made this up to help me print correctly
+bool isHit = false;
+
 /*
  * insert pages from a reference string into a page table and measure
  * the page fault rate
@@ -38,11 +41,11 @@ int testLRU(int numOfFrames, int *refString, int refStrLen)
     {
 	    // inserting a page into the page table
         printf("%d -> ", refString[i]);
+        insertLRU(refString[i]);
         displayLRU();
-	    insertLRU(refString[i]);
     }
 
-    return 0;
+    return nummberOfFaults;
 }
 
 /*
@@ -64,14 +67,76 @@ void insertLRU(int pageNumber)
         pageTableTop = newFrame;
         leastRecentlyUsed = newFrame;
 
+        nummberOfFaults++;
+        pageTableSize++;
     }
     // else, insert until we reach the number of frames per process, that way we cannot exceed it 
     else if (pageTableSize < numberOfFramesPerProcess)
     {
-        newFrame->up = NULL;
-        newFrame->down = pageTableTop;
-        pageTableTop->up = newFrame;
-        pageTableTop = newFrame;
+        // newFrame->up = NULL;
+        // newFrame->down = pageTableTop;
+        // pageTableTop->up = newFrame;
+        // pageTableTop = newFrame;
+
+        FRAME *hitOrMiss = searchLRU(pageNumber);
+
+        // if miss
+        if (hitOrMiss == NULL)
+        {
+            // insert
+            newFrame->up = NULL;
+            newFrame->down = pageTableTop;
+            pageTableTop->up = newFrame;
+            pageTableTop = newFrame;
+
+            nummberOfFaults++;
+            pageTableSize++;
+        }
+        // if a hit
+        else
+        {
+            isHit = true;
+            // if the value is at the front, we do not have to do anything
+            if (pageTableTop->pageNumber == hitOrMiss->pageNumber)
+            {   
+                hitPageNumber++;
+            }
+            // else if the least recently used value is where the hit happens
+            // move it to the front
+            // i will simply insert it to the front and then remove the last node
+            else if (leastRecentlyUsed->pageNumber == hitOrMiss->pageNumber)
+            {
+                // insert
+                newFrame->up = NULL;
+                newFrame->down = pageTableTop;
+                pageTableTop->up = newFrame;
+                pageTableTop = newFrame;
+
+                //remove
+                leastRecentlyUsed = leastRecentlyUsed->up;
+                leastRecentlyUsed->down = NULL;
+
+                hitPageNumber++;
+            }
+            // if in between, 'move it' to the front
+            // I will just connect the previous and next nodes to each other and then disconnect the 'free floating' node
+            else
+            {
+                FRAME *tempUpper = hitOrMiss->up;
+                FRAME *tempLower = hitOrMiss->down;
+                tempUpper->down = hitOrMiss->down;
+                tempLower->up = hitOrMiss->up;
+                hitOrMiss = NULL;
+
+                // insert to the front and remove 
+                newFrame->up = NULL;
+                newFrame->down = pageTableTop;
+                pageTableTop->up = newFrame;
+                pageTableTop = newFrame;
+                
+                hitPageNumber++;
+            }
+        }
 
     }
     // else, check for page fault or miss
@@ -94,16 +159,16 @@ void insertLRU(int pageNumber)
             leastRecentlyUsed = leastRecentlyUsed->up;
             leastRecentlyUsed->down = NULL;
 
-            printf("miss!\n");
+            nummberOfFaults++;
         }
         // if a hit
         else
         {
+            isHit = true;
             // if the value is at the front, we do not have to do anything
             if (pageTableTop->pageNumber == hitOrMiss->pageNumber)
             {   
                 hitPageNumber++;
-                printf("Hit front!\n");
             }
             // else if the least recently used value is where the hit happens
             // move it to the front
@@ -119,7 +184,8 @@ void insertLRU(int pageNumber)
                 //remove
                 leastRecentlyUsed = leastRecentlyUsed->up;
                 leastRecentlyUsed->down = NULL;
-                printf("Hit LRU!\n");
+                
+                hitPageNumber++;
             }
             // if in between, 'move it' to the front
             // I will just connect the previous and next nodes to each other and then disconnect the 'free floating' node
@@ -137,10 +203,10 @@ void insertLRU(int pageNumber)
                 pageTableTop->up = newFrame;
                 pageTableTop = newFrame;
                 
+                hitPageNumber++;
             }
         }
     }
-    pageTableSize++;
 }
 
 /**
@@ -174,14 +240,31 @@ void displayLRU()
 {
     // TODO: implement
     FRAME *travel = pageTableTop;
-
+    bool atFirst = true;
+    
+    // transversing the list
     while (travel != NULL)
     {
-        printf("%d ", travel->pageNumber);
-        
+        if (isHit && atFirst)
+            {
+                printf("%d< ", travel->pageNumber);
+                atFirst = false;
+            }
+        else
+            printf("%d ", travel->pageNumber);
         travel = travel->down;
     }
-    printf("\n");
+
+    // to help us print accurately
+    if (!isHit)
+        {
+            printf("*\n");
+        }
+    else
+    {
+        printf("\n");
+        isHit = false;
+    }
 }
 
 void freePageTableLRU()

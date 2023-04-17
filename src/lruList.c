@@ -1,5 +1,8 @@
 /**
  * This implements the LRU page-replacement algorithm.
+ * Francisco Alcaraz
+ * COMP 362
+ * Spring 2023
  */
 
 #include "../inc/lruList.h"

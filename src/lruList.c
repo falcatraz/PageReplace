@@ -273,4 +273,14 @@ void displayLRU()
 void freePageTableLRU()
 {
     // TODO: implement
+    FRAME *current = pageTableTop;
+    FRAME *next;
+
+    // deallocating each node
+    while (current != NULL)
+    {
+        next = current->up;
+        free(current);
+        current = next;
+    }
 }

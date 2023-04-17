@@ -16,7 +16,7 @@ static int numberOfFramesPerProcess = 0;
 // statistics
 int nummberOfFaults = 0;
 
-int hitPageNumber;
+int hitPageNumber = 0;
 
 /*
  * insert pages from a reference string into a page table and measure
@@ -37,8 +37,9 @@ int testLRU(int numOfFrames, int *refString, int refStrLen)
     for (int i = 0; i < refStringLength; ++i)
     {
 	    // inserting a page into the page table
-	    insertLRU(refString[i]);
+        printf("%d -> ", refString[i]);
         displayLRU();
+	    insertLRU(refString[i]);
     }
 
     return 0;
@@ -62,16 +63,83 @@ void insertLRU(int pageNumber)
         newFrame->down = NULL;
         pageTableTop = newFrame;
         leastRecentlyUsed = newFrame;
+
     }
-    // else, we insert a new value. Top will hold the most recent value
-    else
+    // else, insert until we reach the number of frames per process, that way we cannot exceed it 
+    else if (pageTableSize < numberOfFramesPerProcess)
     {
         newFrame->up = NULL;
         newFrame->down = pageTableTop;
         pageTableTop->up = newFrame;
         pageTableTop = newFrame;
-    }
 
+    }
+    // else, check for page fault or miss
+    // if a hit, move the value to the front
+    // if a miss, remove the oldest value and push the 'new' value in
+    else
+    {
+        FRAME *hitOrMiss = searchLRU(pageNumber);
+
+        // if miss
+        if (hitOrMiss == NULL)
+        {
+            // insert
+            newFrame->up = NULL;
+            newFrame->down = pageTableTop;
+            pageTableTop->up = newFrame;
+            pageTableTop = newFrame;
+
+            //remove
+            leastRecentlyUsed = leastRecentlyUsed->up;
+            leastRecentlyUsed->down = NULL;
+
+            printf("miss!\n");
+        }
+        // if a hit
+        else
+        {
+            // if the value is at the front, we do not have to do anything
+            if (pageTableTop->pageNumber == hitOrMiss->pageNumber)
+            {   
+                hitPageNumber++;
+                printf("Hit front!\n");
+            }
+            // else if the least recently used value is where the hit happens
+            // move it to the front
+            // i will simply insert it to the front and then remove the last node
+            else if (leastRecentlyUsed->pageNumber == hitOrMiss->pageNumber)
+            {
+                // insert
+                newFrame->up = NULL;
+                newFrame->down = pageTableTop;
+                pageTableTop->up = newFrame;
+                pageTableTop = newFrame;
+
+                //remove
+                leastRecentlyUsed = leastRecentlyUsed->up;
+                leastRecentlyUsed->down = NULL;
+                printf("Hit LRU!\n");
+            }
+            // if in between, 'move it' to the front
+            // I will just connect the previous and next nodes to each other and then disconnect the 'free floating' node
+            else
+            {
+                FRAME *tempUpper = hitOrMiss->up;
+                FRAME *tempLower = hitOrMiss->down;
+                tempUpper->down = hitOrMiss->down;
+                tempLower->up = hitOrMiss->up;
+                hitOrMiss = NULL;
+
+                // insert to the front
+                newFrame->up = NULL;
+                newFrame->down = pageTableTop;
+                pageTableTop->up = newFrame;
+                pageTableTop = newFrame;
+                
+            }
+        }
+    }
     pageTableSize++;
 }
 
@@ -83,8 +151,23 @@ void insertLRU(int pageNumber)
 FRAME *searchLRU(int pageNumber)
 {
     // TODO: implement
+    FRAME *retFrame = NULL;
 
-    return NULL;
+    // searching the list to see if the page number exists
+    // if it does not, it will simply leave the return value at NULL
+    FRAME *travel = pageTableTop;
+    while (travel != NULL)
+    {
+        if (travel->pageNumber == pageNumber)
+        {
+            retFrame = travel;
+            break;
+        }
+        
+        travel = travel->down;
+    }
+
+    return retFrame;
 }
 
 void displayLRU()
@@ -99,7 +182,6 @@ void displayLRU()
         travel = travel->down;
     }
     printf("\n");
-
 }
 
 void freePageTableLRU()

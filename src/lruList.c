@@ -99,10 +99,7 @@ FRAME *searchLRU(int pageNumber)
 void displayLRU()
 {
     // TODO: implement
-    for (FRAME* travel = pageTableTop; travel != NULL; travel = travel->down)
-    {
-	printf("%d : ", travel->pageNumber);
-    }
+
 }
 
 void freePageTableLRU()

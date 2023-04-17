@@ -38,7 +38,8 @@ int testLRU(int numOfFrames, int *refString, int refStrLen)
     {
 	    // inserting a page into the page table
 	    insertLRU(refString[i]);
-	    displayLRU();
+        displayLRU();
+
     }
 
     return 0;
@@ -53,35 +54,26 @@ void insertLRU(int pageNumber)
     // create a new page pointer so that we can insert it
     FRAME* newFrame = malloc(sizeof(FRAME));
     newFrame->pageNumber = pageNumber;
-    newFrame->up = NULL;
-    newFrame->down = NULL;
-
-    printf("Hi\n");
 
     // if the size of the table is zero, then it is empty and we can directly insert a page number
     if (pageTableTop == NULL)
     {
-	    pageTableTop = newFrame;
-	    leastRecentlyUsed = newFrame;
-	    pageTableSize++;
+        newFrame->up = NULL;
+        newFrame->down = NULL;
+        pageTableTop = newFrame;
     }
-    // if we have less than four pages in the frame (page table), then we can insert it to the end
     else
     {
-	pageTableTop->up = newFrame;
-	newFrame->down = pageTableTop;
-
-	pageTableSize++;
-
+        newFrame->up = NULL;
+        newFrame->down = pageTableTop;
+        pageTableTop->up = newFrame;
+        pageTableTop = newFrame;
     }
-    // else, we search if the pageNumber is in there, if it is not, then we have to insert it.
-    // if it is, we simply move it to the front
 
+    leastRecentlyUsed = pageTableTop;
 
+    pageTableSize++;
 
-
-
-    free(newFrame);
 }
 
 /**
@@ -99,6 +91,15 @@ FRAME *searchLRU(int pageNumber)
 void displayLRU()
 {
     // TODO: implement
+    FRAME *travel = leastRecentlyUsed;
+
+    while (travel != NULL)
+    {
+        printf("%d ", travel->pageNumber);
+        
+        travel = travel->down;
+    }
+    printf("\n");
 
 }
 

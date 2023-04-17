@@ -39,7 +39,6 @@ int testLRU(int numOfFrames, int *refString, int refStrLen)
 	    // inserting a page into the page table
 	    insertLRU(refString[i]);
         displayLRU();
-
     }
 
     return 0;
@@ -56,12 +55,15 @@ void insertLRU(int pageNumber)
     newFrame->pageNumber = pageNumber;
 
     // if the size of the table is zero, then it is empty and we can directly insert a page number
+    // this initial value will be the least recently used
     if (pageTableTop == NULL)
     {
         newFrame->up = NULL;
         newFrame->down = NULL;
         pageTableTop = newFrame;
+        leastRecentlyUsed = newFrame;
     }
+    // else, we insert a new value. Top will hold the most recent value
     else
     {
         newFrame->up = NULL;
@@ -70,10 +72,7 @@ void insertLRU(int pageNumber)
         pageTableTop = newFrame;
     }
 
-    leastRecentlyUsed = pageTableTop;
-
     pageTableSize++;
-
 }
 
 /**
@@ -91,7 +90,7 @@ FRAME *searchLRU(int pageNumber)
 void displayLRU()
 {
     // TODO: implement
-    FRAME *travel = leastRecentlyUsed;
+    FRAME *travel = pageTableTop;
 
     while (travel != NULL)
     {
@@ -107,4 +106,3 @@ void freePageTableLRU()
 {
     // TODO: implement
 }
-

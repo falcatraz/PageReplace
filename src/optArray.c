@@ -67,6 +67,7 @@ int searchOPT(int pageNumber)
     // TODO: implement
     // linear search
     bool found = false;
+    bool foundEmpty = false;
     int countSize = 0;
     int index;
 
@@ -76,13 +77,15 @@ int searchOPT(int pageNumber)
         if (pageTable[i] == -1)
         {
             index = i;
+            foundEmpty = true;
+            numOfFaults++;
             break;
         }
         countSize++;
     }
 
     // look for the page or a victim to evict
-    if (countSize >= numOfFramesPerProcess)
+    if (countSize >= numOfFramesPerProcess && !foundEmpty)
     {
         for (int i = 0; i < numOfFramesPerProcess; ++i)
         {
@@ -98,6 +101,7 @@ int searchOPT(int pageNumber)
         if (!found)
         {
             index = findVictimPageOPT();
+            numOfFaults++;
         }
     }
 

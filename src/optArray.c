@@ -1,5 +1,8 @@
 /**
  * This implements the LRU page-replacement algorithm.
+ * Francisco Alcaraz
+ * Comp 362
+ * Spring 2023
  */
 
 #include "../inc/optArray.h"
@@ -19,6 +22,9 @@ int numOfFaults;
 
 // this index is used to go through the sequence of pages references
 int currentPgeReferenceIndex;
+
+// booleans to check if we have found a victim or if we have missed
+bool isMissed = false;
 
 int testOPT(int numOfFrames, int *refString, int refStrLen)
 {
@@ -79,6 +85,7 @@ int searchOPT(int pageNumber)
             index = i;
             foundEmpty = true;
             numOfFaults++;
+            isMissed = true;
             break;
         }
         countSize++;
@@ -92,6 +99,7 @@ int searchOPT(int pageNumber)
             if (pageTable[i] == pageNumber)
             {
                 index = i;
+                hitPageNum = index;
                 found = true;
                 break;
             }
@@ -101,6 +109,7 @@ int searchOPT(int pageNumber)
         if (!found)
         {
             index = findVictimPageOPT();
+            isMissed = true;
             numOfFaults++;
         }
     }
@@ -145,6 +154,7 @@ int findVictimPageOPT()
             maxIndex = i;
         }
     }
+    victimIndex = maxIndex;
 
     return maxIndex;
 }
@@ -155,7 +165,15 @@ void displayOPT()
 
     for (int i = 0; i < numOfFramesPerProcess; ++i)
     {
-        printf("%d ", pageTable[i]);
+        if (!isMissed && i == hitPageNum)
+            printf("%d< ", pageTable[i]);
+        else
+            printf("%d ", pageTable[i]);
+    }
+    if (isMissed)
+    {
+        printf("*");
+        isMissed = false;
     }
     printf("\n");
 }
